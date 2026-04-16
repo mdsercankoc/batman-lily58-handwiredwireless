@@ -1,0 +1,5 @@
+config SHIELD_BATMAN_LILY58_LEFT
+    def_bool $(shields_list_contains,batman_lily58_left)
+
+config SHIELD_BATMAN_LILY58_RIGHT
+    def_bool $(shields_list_contains,batman_lily58_right)
