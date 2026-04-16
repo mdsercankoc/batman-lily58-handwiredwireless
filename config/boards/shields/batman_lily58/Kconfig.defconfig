@@ -1,0 +1,6 @@
+if SHIELD_BATMAN_LILY58_LEFT || SHIELD_BATMAN_LILY58_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Batman Lily58"
+
+endif
