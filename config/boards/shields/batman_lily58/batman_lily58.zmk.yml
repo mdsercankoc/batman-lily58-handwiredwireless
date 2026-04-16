@@ -1,0 +1,7 @@
+file_format: 1
+id: batman_lily58
+name: Batman Lily58
+type: shield
+siblings:
+  - batman_lily58_left
+  - batman_lily58_right
