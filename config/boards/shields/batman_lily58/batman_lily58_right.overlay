@@ -1,0 +1,5 @@
+#include "batman_lily58.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
