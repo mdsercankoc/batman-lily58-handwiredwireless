@@ -6,10 +6,9 @@
         zmk,matrix_transform = &default_transform;
     };
 
-    // 58 Tuşlu Lily58 Geometrisi (Her yanda 4x6 ana blok + 5 başparmak tuşu)
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <12>; // 6 sol + 6 sağ
+        columns = <12>;
         rows = <5>;
         map = <
         RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)    RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11)
@@ -25,22 +24,21 @@
         label = "KSCAN";
         diode-direction = "col2row";
 
-        // SuperMini nRF52840 Kesin GPIO Adreslemeleri
         row-gpios
-            = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // 006
-            , <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // 008
-            , <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 017
-            , <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 020
-            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // 022
+            = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
         col-gpios
-            = <&gpio0 24 GPIO_ACTIVE_HIGH> // 024
-            , <&gpio1 0 GPIO_ACTIVE_HIGH>  // 100 (Port 1, Pin 0)
-            , <&gpio0 11 GPIO_ACTIVE_HIGH> // 011
-            , <&gpio1 4 GPIO_ACTIVE_HIGH>  // 104 (Port 1, Pin 4)
-            , <&gpio0 31 GPIO_ACTIVE_HIGH> // 031
-            , <&gpio0 29 GPIO_ACTIVE_HIGH> // 029
+            = <&gpio0 24 GPIO_ACTIVE_HIGH>
+            , <&gpio1 0 GPIO_ACTIVE_HIGH>
+            , <&gpio0 11 GPIO_ACTIVE_HIGH>
+            , <&gpio1 4 GPIO_ACTIVE_HIGH>
+            , <&gpio0 31 GPIO_ACTIVE_HIGH>
+            , <&gpio0 29 GPIO_ACTIVE_HIGH>
             ;
     };
 };
