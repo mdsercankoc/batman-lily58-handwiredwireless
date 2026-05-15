@@ -1,5 +1,6 @@
+---
 include:
-  - board: nice_nano//zmk
+  - board: nice_nano_v2//zmk
     shield: batman_lily58_left
-  - board: nice_nano//zmk
+  - board: nice_nano_v2//zmk
     shield: batman_lily58_right
