@@ -4,3 +4,5 @@ include:
     shield: batman_lily58_left
   - board: nice_nano@2//zmk
     shield: batman_lily58_right
+  - board: nice_nano@2//zmk
+    shield: settings_reset
