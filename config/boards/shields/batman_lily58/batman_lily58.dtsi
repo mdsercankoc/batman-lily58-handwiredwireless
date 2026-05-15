@@ -1,4 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
 #include <dt-bindings/gpio/gpio.h>
 
 / {
@@ -8,102 +9,85 @@
         zmk,physical-layout = &batman_layout;
     };
 
-    // --- ZMK STUDIO GÖRSEL MATRİS VE KOORDİNAT HARİTASI ---
-    physical_layouts {
-        compatible = "zmk,physical-layouts";
-        batman_layout: batman_layout {
-            compatible = "zmk,physical-layout";
-            display-name = "Batman Lily58 Wireless";
-            transform = <&default_transform>;
-            kscan = <&kscan0>;
-            keys = <
-                // Satır 0
-                &k00 &k01 &k02 &k03 &k04 &k05    &k06 &k07 &k08 &k09 &k10 &k11
-                // Satır 1
-                &k12 &k13 &k14 &k15 &k16 &k17    &k18 &k19 &k20 &k21 &k22 &k23
-                // Satır 2
-                &k24 &k25 &k26 &k27 &k28 &k29    &k30 &k31 &k32 &k33 &k34 &k35
-                // Satır 3
-                &k36 &k37 &k38 &k39 &k40 &k41    &k42 &k43 &k44 &k45 &k46 &k47
-                // Satır 4 (Başparmaklar)
-                          &k48 &k49 &k50 &k51 &k52    &k53 &k54 &k55 &k56 &k57
-            >;
-        };
+    batman_layout: batman_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Batman Lily58";
+        transform = <&default_transform>;
+        kscan = <&kscan0>;
+        
+        // ZMK Studio Görsel Matrisi (Genişlik Yükseklik X Y Dönüş RX RY)
+        keys
+            // Satır 0
+            = <&key_physical_attrs 100 100 0 0 0 0 0>
+            , <&key_physical_attrs 100 100 100 0 0 0 0>
+            , <&key_physical_attrs 100 100 200 0 0 0 0>
+            , <&key_physical_attrs 100 100 300 0 0 0 0>
+            , <&key_physical_attrs 100 100 400 0 0 0 0>
+            , <&key_physical_attrs 100 100 500 0 0 0 0>
+            , <&key_physical_attrs 100 100 700 0 0 0 0>
+            , <&key_physical_attrs 100 100 800 0 0 0 0>
+            , <&key_physical_attrs 100 100 900 0 0 0 0>
+            , <&key_physical_attrs 100 100 1000 0 0 0 0>
+            , <&key_physical_attrs 100 100 1100 0 0 0 0>
+            , <&key_physical_attrs 100 100 1200 0 0 0 0>
+            
+            // Satır 1
+            , <&key_physical_attrs 100 100 0 100 0 0 0>
+            , <&key_physical_attrs 100 100 100 100 0 0 0>
+            , <&key_physical_attrs 100 100 200 100 0 0 0>
+            , <&key_physical_attrs 100 100 300 100 0 0 0>
+            , <&key_physical_attrs 100 100 400 100 0 0 0>
+            , <&key_physical_attrs 100 100 500 100 0 0 0>
+            , <&key_physical_attrs 100 100 700 100 0 0 0>
+            , <&key_physical_attrs 100 100 800 100 0 0 0>
+            , <&key_physical_attrs 100 100 900 100 0 0 0>
+            , <&key_physical_attrs 100 100 1000 100 0 0 0>
+            , <&key_physical_attrs 100 100 1100 100 0 0 0>
+            , <&key_physical_attrs 100 100 1200 100 0 0 0>
+            
+            // Satır 2
+            , <&key_physical_attrs 100 100 0 200 0 0 0>
+            , <&key_physical_attrs 100 100 100 200 0 0 0>
+            , <&key_physical_attrs 100 100 200 200 0 0 0>
+            , <&key_physical_attrs 100 100 300 200 0 0 0>
+            , <&key_physical_attrs 100 100 400 200 0 0 0>
+            , <&key_physical_attrs 100 100 500 200 0 0 0>
+            , <&key_physical_attrs 100 100 700 200 0 0 0>
+            , <&key_physical_attrs 100 100 800 200 0 0 0>
+            , <&key_physical_attrs 100 100 900 200 0 0 0>
+            , <&key_physical_attrs 100 100 1000 200 0 0 0>
+            , <&key_physical_attrs 100 100 1100 200 0 0 0>
+            , <&key_physical_attrs 100 100 1200 200 0 0 0>
+            
+            // Satır 3
+            , <&key_physical_attrs 100 100 0 300 0 0 0>
+            , <&key_physical_attrs 100 100 100 300 0 0 0>
+            , <&key_physical_attrs 100 100 200 300 0 0 0>
+            , <&key_physical_attrs 100 100 300 300 0 0 0>
+            , <&key_physical_attrs 100 100 400 300 0 0 0>
+            , <&key_physical_attrs 100 100 500 300 0 0 0>
+            , <&key_physical_attrs 100 100 700 300 0 0 0>
+            , <&key_physical_attrs 100 100 800 300 0 0 0>
+            , <&key_physical_attrs 100 100 900 300 0 0 0>
+            , <&key_physical_attrs 100 100 1000 300 0 0 0>
+            , <&key_physical_attrs 100 100 1100 300 0 0 0>
+            , <&key_physical_attrs 100 100 1200 300 0 0 0>
+            
+            // Satır 4 (Başparmaklar)
+            , <&key_physical_attrs 100 100 200 400 0 0 0>
+            , <&key_physical_attrs 100 100 300 400 0 0 0>
+            , <&key_physical_attrs 100 100 400 400 0 0 0>
+            , <&key_physical_attrs 100 100 500 400 0 0 0>
+            , <&key_physical_attrs 100 100 600 400 0 0 0>
+            
+            , <&key_physical_attrs 100 100 700 400 0 0 0>
+            , <&key_physical_attrs 100 100 800 400 0 0 0>
+            , <&key_physical_attrs 100 100 900 400 0 0 0>
+            , <&key_physical_attrs 100 100 1000 400 0 0 0>
+            , <&key_physical_attrs 100 100 1100 400 0 0 0>
+            ;
     };
 
-    // --- 58 TUŞUN FİZİKSEL X/Y KOORDİNATLARI (CHROME ARAYÜZÜ İÇİN ZORUNLU) ---
-    // Sol Yarı (X: 0 - 500 arası) | Sağ Yarı (X: 700 - 1200 arası) | Standart 1U Tuş = 100x100
-    
-    // Satır 0 (Y: 0)
-    k00: k00 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <0>; y = <0>; };
-    k01: k01 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <100>; y = <0>; };
-    k02: k02 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <200>; y = <0>; };
-    k03: k03 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <300>; y = <0>; };
-    k04: k04 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <400>; y = <0>; };
-    k05: k05 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <500>; y = <0>; };
-    k06: k06 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <700>; y = <0>; };
-    k07: k07 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <800>; y = <0>; };
-    k08: k08 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <900>; y = <0>; };
-    k09: k09 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1000>; y = <0>; };
-    k10: k10 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1100>; y = <0>; };
-    k11: k11 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1200>; y = <0>; };
-
-    // Satır 1 (Y: 100)
-    k12: k12 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <0>; y = <100>; };
-    k13: k13 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <100>; y = <100>; };
-    k14: k14 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <200>; y = <100>; };
-    k15: k15 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <300>; y = <100>; };
-    k16: k16 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <400>; y = <100>; };
-    k17: k17 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <500>; y = <100>; };
-    k18: k18 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <700>; y = <100>; };
-    k19: k19 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <800>; y = <100>; };
-    k20: k20 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <900>; y = <100>; };
-    k21: k21 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1000>; y = <100>; };
-    k22: k22 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1100>; y = <100>; };
-    k23: k23 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1200>; y = <100>; };
-
-    // Satır 2 (Y: 200)
-    k24: k24 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <0>; y = <200>; };
-    k25: k25 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <100>; y = <200>; };
-    k26: k26 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <200>; y = <200>; };
-    k27: k27 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <300>; y = <200>; };
-    k28: k28 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <400>; y = <200>; };
-    k29: k29 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <500>; y = <200>; };
-    k30: k30 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <700>; y = <200>; };
-    k31: k31 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <800>; y = <200>; };
-    k32: k32 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <900>; y = <200>; };
-    k33: k33 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1000>; y = <200>; };
-    k34: k34 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1100>; y = <200>; };
-    k35: k35 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1200>; y = <200>; };
-
-    // Satır 3 (Y: 300)
-    k36: k36 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <0>; y = <300>; };
-    k37: k37 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <100>; y = <300>; };
-    k38: k38 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <200>; y = <300>; };
-    k39: k39 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <300>; y = <300>; };
-    k40: k40 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <400>; y = <300>; };
-    k41: k41 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <500>; y = <300>; };
-    k42: k42 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <700>; y = <300>; };
-    k43: k43 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <800>; y = <300>; };
-    k44: k44 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <900>; y = <300>; };
-    k45: k45 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1000>; y = <300>; };
-    k46: k46 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1100>; y = <300>; };
-    k47: k47 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1200>; y = <300>; };
-
-    // Satır 4 (Başparmaklar - Y: 400)
-    k48: k48 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <200>; y = <400>; };
-    k49: k49 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <300>; y = <400>; };
-    k50: k50 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <400>; y = <400>; };
-    k51: k51 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <500>; y = <400>; };
-    k52: k52 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <600>; y = <400>; };
-    
-    k53: k53 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <700>; y = <400>; };
-    k54: k54 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <800>; y = <400>; };
-    k55: k55 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <900>; y = <400>; };
-    k56: k56 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1000>; y = <400>; };
-    k57: k57 { compatible = "zmk,key-physical-attrs"; width = <100>; height = <100>; x = <1100>; y = <400>; };
-
-    // --- 58 TUŞLU HAND-WIRED ELEKTRONİK MATRİS (DONANIM HARİTASI) ---
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>; // 6 Sol + 6 Sağ
